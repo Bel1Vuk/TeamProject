@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trello clone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="root">
+    <div
+    <div class="line">
+      <img src="/images/trello-logo-blue.png" width="100px" />
+
+      <div class="upperline">
+        <p>Workspaces ˬ</p>
+        <p>Recent ˬ</p>
+        <p>Starred ˬ</p>
+        <p>Templates ˬ</p>
+        <button class="create">Create</button>
+      </div>
+      <input
+        autocomplete="off"
+        spellcheck="false"
+        class="search"
+        data-test-id="header-search-input"
+        type="search"
+        placeholder="🔍Search"
+        value
+      />
+    </div>
+    <div id="tables">
+      <div class="table">
+        <div class="header">
+          <h3 id="main-table-name" style="cursor: default" class="table-name">
+            Useful links
+          </h3>
+
+          <input
+            style="display: none"
+            type="text"
+            id="table-name-input"
+            name="table-name-input"
+          />
+
+          <a
+            onclick="SaveTableNameChanges()"
+            style="display: none; margin-left: 230px"
+            href="#"
+            id="completer"
+          >
+            <li class="fas fa-check-circle"></li>
+          </a>
+
+          <a
+            onclick="ChangeTableName()"
+            href="#"
+            id="namechanger"
+            class="namechanger"
+          >
+            <li class="fas fa-edit">
+              <img src="/images/three-dots.svg" />
+            </li>
+          </a>
+        </div>
+
+        <div class="cards container" id="cards"></div>
+
+        <div class="adding-cards">
+          <input
+            type="text"
+            id="input-for-add-card"
+            name="input-for-add-card"
+          />
+          <a onclick="addCard('click')" href="#" id="additem">
+            <li class="fas fa-plus"></li>
+            Add another card
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style="display: none" id="card-settings" class="card-settings">
+      <div class="change-card-info">
+        <h3 id="cardLabelheader"></h3>
+        <h5 id="card-list-info"></h5>
+        <input
+          type="text"
+          id="input-for-change-card-label"
+          name="input-for-change-card-label"
+        />
+      </div>
+      <a id="close-edit-panel" href="#">Close</a>
+      <a id="delete-card" href="#">Delete</a>
+      <a id="saved-card-changes" href="#">Save</a>
+    </div>
+
+    <div style="display: none" id="card-settings" class="card-settings">
+      <div class="change-card-info">
+        <h3 id="cardLabelheader"></h3>
+        <h5 id="card-list-info"></h5>
+        <input
+          type="text"
+          id="input-for-change-card-label"
+          name="input-for-change-card-label"
+        />
+      </div>
+      <a id="close-edit-panel" href="#">Close</a>
+      <a id="delete-card" href="#">Delete</a>
+      <a id="saved-card-changes" href="#">Save</a>
+    </div>
+    <div id="tables2">
+      <div class="table">
+        <div class="header">
+          <h3 id="main-table-name2" style="cursor: default" class="table-name">
+            Useful links
+          </h3>
+          <input
+            style="display: none"
+            type="text"
+            id="table-name-input2"
+            name="table-name-input2"
+          />
+
+          <a
+            onclick="SaveTableNameChanges2()"
+            style="display: none; margin-left: 230px"
+            href="#"
+            id="completer2"
+          >
+            <li class="fas fa-check-circle"></li>
+          </a>
+
+          <a
+            onclick="ChangeTableName2()"
+            href="#"
+            id="namechanger2"
+            class="namechanger"
+          >
+            <li class="fas fa-edit edit2">
+              <img src="/images/three-dots.svg" />
+            </li>
+          </a>
+        </div>
+
+        <div class="cards container" id="cards2"></div>
+
+        <div class="adding-cards">
+          <input
+            type="text"
+            id="input-for-add-card2"
+            name="input-for-add-card2"
+          />
+          <a onclick="addCard2('click')" href="#" id="additem">
+            <li class="fas fa-plus"></li>
+            Add another card
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style="display: none" id="card-settings" class="card-settings">
+      <div class="change-card-info">
+        <h3 id="cardLabelheader"></h3>
+        <h5 id="card-list-info"></h5>
+        <input
+          type="text"
+          id="input-for-change-card-label"
+          name="input-for-change-card-label"
+        />
+      </div>
+      <a id="close-edit-panel" href="#">Close</a>
+      <a id="delete-card" href="#">Delete</a>
+      <a id="saved-card-changes" href="#">Save</a>
+    </div>
+    <div id="tables3">
+      <div class="table">
+        <div class="header">
+          <h3 id="main-table-name3" style="cursor: default" class="table-name">
+            Useful links
+          </h3>
+          <input
+            style="display: none"
+            type="text"
+            id="table-name-input3"
+            name="table-name-input3"
+          />
+
+          <a
+            onclick="SaveTableNameChanges3()"
+            style="display: none; margin-left: 230px"
+            href="#"
+            id="completer3"
+          >
+            <li class="fas fa-check-circle"></li>
+          </a>
+
+          <a
+            onclick="ChangeTableName3()"
+            href="#"
+            id="namechanger3"
+            class="namechanger"
+          >
+            <li class="fas fa-edit">
+              <img src="/images/three-dots.svg" />
+            </li>
+          </a>
+        </div>
+
+        <div class="cards container" id="cards3"></div>
+
+        <div class="adding-cards">
+          <input
+            type="text"
+            id="input-for-add-card3"
+            name="input-for-add-card3"
+          />
+          <a onclick="addCard3('click')" href="#" id="additem">
+            <li class="fas fa-plus"></li>
+            Add another card
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: none" id="card-settings" class="card-settings">
+      <div class="change-card-info">
+        <h3 id="cardLabelheader"></h3>
+        <h5 id="card-list-info"></h5>
+        <input
+          type="text"
+          id="input-for-change-card-label"
+          name="input-for-change-card-label"
+        />
+      </div>
+      <a id="close-edit-panel" href="#">Close</a>
+      <a id="delete-card" href="#">Delete</a>
+      <a id="saved-card-changes" href="#">Save</a>
+    </div>
+    <div id="tables4">
+      <div class="table">
+        <div class="header">
+          <h3 id="main-table-name4" style="cursor: default" class="table-name">
+            Useful links
+          </h3>
+          <input
+            style="display: none"
+            type="text"
+            id="table-name-input4"
+            name="table-name-input4"
+          />
+
+          <a
+            onclick="SaveTableNameChanges4()"
+            style="display: none; margin-left: 230px"
+            href="#"
+            id="completer4"
+          >
+            <li class="fas fa-check-circle"></li>
+          </a>
+
+          <a
+            onclick="ChangeTableName4()"
+            href="#"
+            id="namechanger4"
+            class="namechanger"
+          >
+            <li class="fas fa-edit">
+              <img src="/images/three-dots.svg" />
+            </li>
+          </a>
+        </div>
+
+        <div class="cards container" id="cards4"></div>
+
+        <div class="adding-cards">
+          <input
+            type="text"
+            id="input-for-add-card4"
+            name="input-for-add-card4"
+          />
+          <a onclick="addCard4('click')" href="#" id="additem">
+            <li class="fas fa-plus"></li>
+            Add another card
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: none" id="card-settings" class="card-settings">
+      <div class="change-card-info">
+        <h3 id="cardLabelheader"></h3>
+        <h5 id="card-list-info"></h5>
+        <input
+          type="text"
+          id="input-for-change-card-label"
+          name="input-for-change-card-label"
+        />
+      </div>
+      <a id="close-edit-panel" href="#">Close</a>
+      <a id="delete-card" href="#">Delete</a>
+      <a id="saved-card-changes" href="#">Save</a>
+    </div>
+    <button class="save" id="save">Save All Changes</button>
+    <script src="index.js"></script>
+    <script src="/table-name.js"></script>
+  </body>
+</html>
